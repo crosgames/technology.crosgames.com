@@ -9,17 +9,24 @@ hero: "/images/docker-pkg-express-hero.png"
 draft: true
 
 ---
-Khi làm dự án outsource, có thể bạn sẽ phải deploy một bản demo ở môi trường của nhà đầu tư và không muốn để lộ source code.  
-Hiện nay việc dùng docker để deploy là phổ biến, tuy nhiên các tutorial về docker của express.js đa phần là copy nguyên source code vào trong docker image và chạy lệnh start. Nếu đối tác có kinh nghiệm thì sẽ dẫn tới việc họ mount volume application và lấy được hết source code của mình ra.  
-Giải pháp trong trường hợp này là mình sẽ compile project express.js ra thành một file binary để chạy trong docker, hạn chế việc bị lộ code.  
+Khi làm dự án outsource, có thể bạn sẽ phải deploy một bản demo ở môi trường của nhà đầu tư và không muốn để lộ source code.
+
+  
+Hiện nay việc dùng docker để deploy là phổ biến, tuy nhiên các tutorial về docker của express.js đa phần là copy nguyên source code vào trong docker image và chạy lệnh start. Nếu đối tác có kinh nghiệm thì sẽ dẫn tới việc họ mount volume application và lấy được hết source code của mình ra.
+
+  
+Giải pháp trong trường hợp này là mình sẽ compile project express.js ra thành một file binary để chạy trong docker, hạn chế việc bị lộ code.
+
+  
 Thư viện để giúp build express.js app thành file binary là [https://github.com/vercel/pkg](https://github.com/vercel/pkg "https://github.com/vercel/pkg")  
 Đầu tiên chúng ta sẽ tạo một project express.js cơ bản bằng:
 
-    npm init
-    npm install express --save
+        npm init
+        npm install express --save
 
 Sau đó, chúng ta sẽ tạo file index.js trả về “Hello World!” ở port 3000:
 
+```js
     const express = require('express')
     const app = express()
     const port = 3000
@@ -31,9 +38,11 @@ Sau đó, chúng ta sẽ tạo file index.js trả về “Hello World!” ở p
     app.listen(port, () => {
       console.log(`Example app listening on port ${port}`)
     })
+```
 
 Update file package.json thành như sau, chạy “npm run start” và truy cập vào http://localhost:3000 để test thử.
 
+```json
     {
     	"name": "dockernode",
     	"version": "1.0.0",
@@ -49,11 +58,15 @@ Update file package.json thành như sau, chạy “npm run start” và truy c�
     		"express": "^4.17.3"
     	},
     }
+```
 
-Tiếp theo, chúng ta sẽ build docker image với pkg.  
+Tiếp theo, chúng ta sẽ build docker image với pkg.
+
+  
 Trước hết, chúng ta sẽ add file .dockerignore:
 
-    ```.gitignore
+```.gitignore
+    .gitignore
     **/.classpath
     **/.dockerignore
     **/.git
@@ -78,9 +91,11 @@ Trước hết, chúng ta sẽ add file .dockerignore:
     .env
     LICENSE
     README.md
+```
 
 Sau đó, chúng ta tiếp tục add file Dockerfile
 
+```DockerFile
     FROM alpine:latest AS base
     WORKDIR /app
     ENV NODE_ENV=production
@@ -103,9 +118,11 @@ Sau đó, chúng ta tiếp tục add file Dockerfile
     WORKDIR /app
     COPY --from=build /app/start-server /app/start-server
     CMD ["/app/start-server"]
+```
 
 Và update package.json như sau:
 
+```json
     {
     	"name": "dockernode",
     	"version": "1.0.0",
@@ -128,6 +145,7 @@ Và update package.json như sau:
     		"debug": "1"
     	}
     }
+```
 
 Tiếp theo, chúng ta sẽ chạy 2 lệnh này để build docker và run docker image
 
