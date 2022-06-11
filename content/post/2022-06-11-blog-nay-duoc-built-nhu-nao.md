@@ -2,7 +2,7 @@
 title: Blog này được xây dựng như nào
 date: 2022-06-11
 hero: "/images/2022_06_11_import_novela_to_forestry.jpg"
-excerpt: xử dụng hugo, github và cloudflare để xây dựng blog tech
+excerpt: Sử dụng hugo, github và cloudflare để xây dựng blog tech
 timeToRead: 4
 authors:
 - Anh Ngoc
@@ -10,7 +10,7 @@ authors:
 ---
 # Overview
 
-Mình là một người hâm mộ các công ty sở hữu blog tech hay ho như [Tiki](https://engineering.tiki.vn/),[Riot game](https://technology.riotgames.com/),[Netlify](https://www.netlify.com/blog/tags/engineering/)... nên cũng đề xuất lên lãnh đạo công ty và may mắn được duyêt :v.
+Mình là một người hâm mộ các công ty sở hữu blog tech hay ho như [Tiki](https://engineering.tiki.vn/),[Riot game](https://technology.riotgames.com/),[Netlify](https://www.netlify.com/blog/tags/engineering/)... nên cũng đề xuất lên lãnh đạo công ty và may mắn được duyệt :v.
 
 Blog này mình chọn dùng hugo vì đã quen thuộc với markdown, ngoài ra tránh được các phiền phức như tạo database, bảo trì server và các vấn đề liên quan tới lỗ hổng bảo mật của wordpress.
 
