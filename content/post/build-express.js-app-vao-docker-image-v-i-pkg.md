@@ -1,7 +1,7 @@
 ---
 timeToRead: 0
 authors:
-- Anh Ngọc
+- Anh Ngoc
 title: Build express.js app vào docker image với pkg
 excerpt: 'Compile express.js project to binary bằng pkg và docker '
 date: 2022-06-01T00:00:00+07:00
