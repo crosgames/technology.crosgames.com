@@ -1,5 +1,5 @@
 ---
-title: Quang Hai
+title: Quang Hải
 bio: 'Tech lead
 
   '

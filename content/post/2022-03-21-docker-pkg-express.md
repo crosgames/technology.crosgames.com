@@ -141,4 +141,4 @@ docker build . -t dockernode
 docker run -p 3000:3000 -it dockernode
 ```
 Sau khi chạy xong, thì bạn truy cập vào http://localhost:3000 và sẽ thấy như sau:
-![alt preview](/images/docker-pkg-express.js.png)
+![alt preview](/images/docker-pkg-express-js.png)

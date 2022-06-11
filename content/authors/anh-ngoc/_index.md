@@ -1,5 +1,5 @@
 ---
-title: Anh Ngoc
+title: Anh Ngọc
 bio: 'Web developer.
 
   '
