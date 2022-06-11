@@ -36,11 +36,12 @@ Việc setup cloudflare account và domain nằm ngoài khuôn khổ của bài 
 * Tiếp theo mình sẽ connect vào github để select repository
   ![](/images/2022_06_11_connect_git.jpg)
 * Sau đó mình sẽ cấu hình lệnh build.
-  * Command build: hugo --gc --minify -b $CF_PAGES_URL
-  * Build output directory: /public
-  * Add go version vào environment: GO_VERSION (1.12)
-  * Add hugo version vào environment: HUGO_VERSION (0.65.3)
-  * Ấn "save and deploy"
+
+      Command build: hugo --gc --minify -b $CF_PAGES_URL
+      Build output directory: /public
+      Add go version vào environment: GO_VERSION (1.12)
+      Add hugo version vào environment: HUGO_VERSION (0.65.3)
+* Ấn "save and deploy"
 
   ![](/images/2022_06_11_setup_config.jpg)
 
