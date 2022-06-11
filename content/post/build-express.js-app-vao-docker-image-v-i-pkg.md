@@ -6,7 +6,6 @@ title: Build express.js app vào docker image với pkg
 excerpt: 'Compile express.js project to binary bằng pkg và docker '
 date: 2022-06-01T00:00:00+07:00
 hero: "/images/docker-pkg-express-hero.png"
-draft: true
 
 ---
 Khi làm dự án outsource, có thể bạn sẽ phải deploy một bản demo ở môi trường của nhà đầu tư và không muốn để lộ source code.
