@@ -4,8 +4,7 @@ authors: []
 title: Technology stack tại Crosgames
 excerpt: Technology stack tại Crosgames
 date: 2022-06-15T00:00:00+07:00
-hero: ''
-draft: true
+hero: "/images/15-06-2022-techstack.png"
 
 ---
 Crosgames vốn bắt nguồn từ công ty chuyển sản xuất game bằng Unity3d engine, vì thế C# là ngôn ngữ chính của công ty. Trong quá trình mở rộng sang mảng web-server, javascript được phổ biến dần vào trong công ty.
@@ -18,7 +17,7 @@ Với Unity3d, đội phát triển đã thử nghiệm và tích hợp các pac
 
 Với Photon networking, để update và đảm bảo tính bảo mật cao, công ty đang nghiên cứu và áp dụng Photon Quantum vào trong quá trình sản xuất và đã thu được một số hiệu quả nhất định.
 
-## Web team 
+## Web team
 
 Do đội web vốn được tách ra từ đội game, nên web framework được lựa chọn cũng hết sức tự nhiên là ASP.NET core. May mắn là thời điểm đội web được thành lập thì .Net core đang là phiên bản 3.1, chạy rất ổn định và đa nền tảng. Về sau với yêu cầu về tính năng thì Vue, Postgresql và Redis... được tích hợp vào.
 
